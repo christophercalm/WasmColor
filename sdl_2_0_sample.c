@@ -11,12 +11,17 @@ SDL_Surface *surface;
 void drawRandomPixels() {
     if (SDL_MUSTLOCK(surface)) SDL_LockSurface(surface);
 
-    Uint8 * pixels = surface->pixels;
+    // Uint8 * pixels = surface->pixels;
     
-    for (int i=0; i < 1048576; i++) {
-        char randomByte = rand() % 255;
-        pixels[i] = randomByte;
-    }
+    // for (int i=0; i < 1048576; i++) {
+    //     char randomByte = rand() % 255;
+    //     pixels[i] = randomByte;
+    // }
+
+    SDL_FillRect(surface, NULL, SDL_MapRGB(surface->format, 0xFF, 0xFF, 0xFF));
+    SDL_Rect rect = {0, 0, 100, 100}; // x, y, width, height
+    SDL_FillRect(surface, &rect, SDL_MapRGB(surface->format, 0x00, 0x00, 0x00));
+
 
     if (SDL_MUSTLOCK(surface)) SDL_UnlockSurface(surface);
 
