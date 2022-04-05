@@ -1,0 +1,1 @@
+C:\Users\ccalmes\programming\personal\emsdk\emsdk activate --latest && emcc -c src/wasm_color.c -o wasm_color.o -s USE_SDL=2 && emcc wasm_color.o -o wasm_color.html -s USE_SDL=2 && 	gcc -Isrc/Include -Lsrc/lib -o WasmColor src/wasm_color.c -lmingw32 src/lib/lSDL2main.a -lSDL2

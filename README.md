@@ -2,6 +2,10 @@ Install from here
 https://emscripten.org/docs/getting_started/downloads.html
 https://www.jamesfmackenzie.com/2019/12/01/webassembly-graphics-with-sdl/
 
+set up dev env. 
+
+https://web.archive.org/web/20220223003055/https://giovanni.codes/setup-sdl2-with-visual-studio-code-and-mingw64-on-windows/
+
 emcc -c sdl_2_0_sample.c -o sdl_2_0_sample.o -s USE_SDL=2
 emcc sdl_2_0_sample.o -o sdl_2_0_sample.html -s USE_SDL=2
 
